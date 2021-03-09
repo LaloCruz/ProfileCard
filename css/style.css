@@ -1,0 +1,127 @@
+:root {
+	--dark-cyan: hsl(185, 75%, 39%);
+	--very-dark-blue: hsl(229, 23%, 23%);
+	--dark-grayish-blue: hsl(227, 10%, 46%);
+	--dark-gray: hsl(0, 0%, 59%);
+}
+
+* {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	width: 100%;
+	font-family: 'Kumbh Sans';
+	font-size: 18px;
+	background-color: var(--dark-cyan);
+	overflow: hidden;
+}
+.pattern {
+	position: absolute;
+	left: 0;
+	width: 800px;
+	transform: translate(-50%, -50%);
+}
+
+.header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100%;
+}
+
+.header__card-container {
+	display: grid;
+	grid-template-rows: 35% 40% 25%;
+	text-align: center;
+	height: 400px;
+	width: 350px;
+	background-color: white;
+	border-radius: 15px;
+	z-index: 1;
+}
+.header__card-top {
+	width: 100%;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	background-image: url('../images/bg-pattern-card.svg');
+}
+
+.header__card-middle {
+	border-bottom: 1px solid black;
+}
+.header__profile-photo {
+	position: relative;
+	width: 100%;
+	height: 80px;
+}
+.header__profile-photo img {
+	position: absolute;
+	left: 50%;
+	width: 120px;
+	border: 5px solid white;
+	border-radius: 50%;
+	transform: translate(-60px, -60px);
+}
+.header__profile-name p:first-of-type {
+	font-size: 20px;
+	font-weight: 400;
+	color: var(--dark-grayish-blue);
+}
+
+.header__profile-name p:first-of-type span {
+	font-weight: 700;
+	color: var(--very-dark-blue);
+}
+
+.header__profile-name p:last-of-type {
+	margin-top: 10px;
+	font-size: 14px;
+	color: var(--dark-grayish-blue);
+}
+
+.header__profile-counters {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.header__profile-counter p:first-of-type {
+	font-weight: 700;
+	word-spacing: 1.2;
+	color: var(--very-dark-blue);
+}
+
+.header__profile-counter p:last-of-type {
+	margin-top: 10px;
+	font-size: 12px;
+	color: var(--dark-grayish-blue);
+}
+
+.attribution {
+	position: absolute;
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+.pattern_2 {
+	position: absolute;
+	right: 0;
+	width: 800px;
+	transform: translate(50%, -50%);
+}
+
+@media (min-width: 1440px) {
+	.pattern_2 {
+		position: absolute;
+		right: 0;
+		width: 1000px;
+		transform: translate(50%, -50%);
+	}
+}
